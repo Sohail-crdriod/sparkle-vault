@@ -1,14 +1,9 @@
 {
   "version": 2,
-  "functions": {
-    "api/app.py": {
-      "maxDuration": 30
-    }
-  },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/api/app.py"
+      "source": "/(.*)",
+      "destination": "/api/index"
     }
   ]
 }
