@@ -10,11 +10,20 @@ import json
 # Load environment variables from .env file
 load_dotenv()
 
+# Vercel only allows writing to /tmp, so use that for uploads and database
+IS_VERCEL = os.environ.get('VERCEL') == '1'
+if IS_VERCEL:
+    UPLOAD_FOLDER = '/tmp/uploads'
+    DB_PATH = '/tmp/sparkle_vault.db'
+else:
+    UPLOAD_FOLDER = 'uploads'
+    DB_PATH = 'sparkle_vault.db'
+
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
-# Create uploads folder if it doesn't exist
+# Create uploads folder if it doesn't exist (use /tmp on Vercel)
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Initialize OpenRouter API from environment variable
@@ -63,7 +72,7 @@ Describe the proof chain as nodes and edges (e.g., A[Claim] --> B[Evidence1] -->
 
 # Database initialization
 def init_db():
-    conn = sqlite3.connect('sparkle_vault.db')
+    conn = sqlite3.connect(DB_PATH)
     conn.execute('''
         CREATE TABLE IF NOT EXISTS cases (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -82,7 +91,7 @@ def init_db():
     conn.close()
 
 def save_case(claim, evidence_path, verdict, confidence, verified_facts, logic_leaks, dag_map):
-    conn = sqlite3.connect('sparkle_vault.db')
+    conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute('''
         INSERT INTO cases (claim, evidence_path, verdict, confidence_score, verified_facts, logic_leaks, dag_map, status)
@@ -435,7 +444,7 @@ def submit_case():
 
 @app.route('/download/<int:case_id>')
 def download_report(case_id):
-    conn = sqlite3.connect('sparkle_vault.db')
+    conn = sqlite3.connect(DB_PATH)
     cursor = conn.execute('SELECT * FROM cases WHERE id = ?', (case_id,))
     row = cursor.fetchone()
     conn.close()
@@ -451,7 +460,7 @@ def download_report(case_id):
 
 @app.route('/cases')
 def list_cases():
-    conn = sqlite3.connect('sparkle_vault.db')
+    conn = sqlite3.connect(DB_PATH)
     cursor = conn.execute('SELECT id, claim, verdict, confidence_score, timestamp, status FROM cases ORDER BY timestamp DESC')
     cases = cursor.fetchall()
     conn.close()
@@ -459,7 +468,7 @@ def list_cases():
 
 @app.route('/delete/<int:case_id>', methods=['POST'])
 def delete_case(case_id):
-    conn = sqlite3.connect('sparkle_vault.db')
+    conn = sqlite3.connect(DB_PATH)
     conn.execute('DELETE FROM cases WHERE id = ?', (case_id,))
     conn.commit()
     conn.close()
