@@ -402,45 +402,52 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit_case():
-    claim = request.form.get('claim', '')
-    evidence = request.files.get('evidence')
-    
-    if not claim:
-        return jsonify({'error': 'Claim is required'}), 400
-    
-    # Save evidence file if provided
-    evidence_path = None
-    evidence_description = "No evidence uploaded"
-    if evidence and evidence.filename:
-        filename = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_{evidence.filename}"
-        evidence_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        evidence.save(evidence_path)
-        evidence_description = f"Evidence file: {evidence.filename}"
-    
-    # Analyze with Gemini
-    analysis_text = analyze_with_gemini(claim, evidence_description)
-    parsed = parse_analysis(analysis_text)
-    
-    # Save to database
-    case_id = save_case(
-        claim=claim,
-        evidence_path=evidence_path,
-        verdict=parsed['verdict'],
-        confidence=parsed['confidence'],
-        verified_facts='\n'.join(parsed['verified_facts']),
-        logic_leaks='\n'.join(parsed['logic_leaks']),
-        dag_map=parsed['dag_map']
-    )
-    
-    return render_template('result.html',
-                         case_id=case_id,
-                         claim=claim,
-                         verdict=parsed['verdict'],
-                         confidence=parsed['confidence'],
-                         verified_facts=parsed['verified_facts'],
-                         logic_leaks=parsed['logic_leaks'],
-                         dag_map=parsed['dag_map'],
-                         analysis_text=analysis_text)
+    try:
+        claim = request.form.get('claim', '')
+        evidence = request.files.get('evidence')
+        
+        if not claim:
+            return jsonify({'error': 'Claim is required'}), 400
+        
+        # Save evidence file if provided
+        evidence_path = None
+        evidence_description = "No evidence uploaded"
+        if evidence and evidence.filename:
+            filename = f"{datetime.now().strftime('%Y%m%d_%H%M%S')}_{evidence.filename}"
+            evidence_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            evidence.save(evidence_path)
+            evidence_description = f"Evidence file: {evidence.filename}"
+        
+        # Analyze with Gemini
+        analysis_text = analyze_with_gemini(claim, evidence_description)
+        parsed = parse_analysis(analysis_text)
+        
+        # Save to database
+        case_id = save_case(
+            claim=claim,
+            evidence_path=evidence_path,
+            verdict=parsed['verdict'],
+            confidence=parsed['confidence'],
+            verified_facts='\n'.join(parsed['verified_facts']),
+            logic_leaks='\n'.join(parsed['logic_leaks']),
+            dag_map=parsed['dag_map']
+        )
+        
+        return render_template('result.html',
+                             case_id=case_id,
+                             claim=claim,
+                             verdict=parsed['verdict'],
+                             confidence=parsed['confidence'],
+                             verified_facts=parsed['verified_facts'],
+                             logic_leaks=parsed['logic_leaks'],
+                             dag_map=parsed['dag_map'],
+                             analysis_text=analysis_text)
+    except Exception as e:
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"ERROR in submit_case: {e}")
+        print(error_details)
+        return jsonify({'error': str(e), 'details': error_details}), 500
 
 @app.route('/download/<int:case_id>')
 def download_report(case_id):
