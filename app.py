@@ -369,6 +369,18 @@ def generate_pdf(case_id, claim, verdict, confidence, verified_facts, logic_leak
 def index():
     return render_template('index.html')
 
+@app.route('/debug')
+def debug():
+    """Debug endpoint to check configuration"""
+    api_key = os.environ.get('OPENROUTER_API_KEY')
+    return jsonify({
+        'api_key_configured': bool(api_key and len(api_key) > 20),
+        'api_key_preview': api_key[:15] + "..." + api_key[-4:] if api_key else None,
+        'is_vercel': IS_VERCEL,
+        'upload_folder': UPLOAD_FOLDER,
+        'db_path': DB_PATH
+    })
+
 @app.route('/submit', methods=['POST'])
 def submit_case():
     try:
