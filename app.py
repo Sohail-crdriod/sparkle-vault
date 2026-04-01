@@ -106,27 +106,30 @@ def analyze_with_gemini(claim, evidence_description):
     """Send claim to OpenRouter API for analysis (free tier, no quota limits)"""
     api_key = os.environ.get('OPENROUTER_API_KEY')
     
-    # Log key info for debugging (mask most of it)
+    # DEBUG: Log everything about the API key
+    print(f"DEBUG: API key exists: {bool(api_key)}")
+    print(f"DEBUG: API key length: {len(api_key) if api_key else 0}")
     if api_key:
-        masked_key = api_key[:15] + "..." + api_key[-4:] if len(api_key) > 20 else "invalid_length"
-        print(f"Using API key: {masked_key}")
-    else:
-        print("WARNING: No OPENROUTER_API_KEY found in environment")
+        print(f"DEBUG: API key starts with: {api_key[:20]}...")
     
-    if not api_key or api_key == 'sk-or-v1-your-key-here':
-        print("Falling back to DEMO MODE - no valid API key")
+    # Only use demo mode if NO key at all
+    if not api_key:
+        print("DEBUG: NO API KEY FOUND - using demo mode")
         return generate_mock_analysis(claim, evidence_description)
     
+    # Force API call - don't fall back to demo on errors, return the error instead
     try:
         prompt = SKEPTIC_PROMPT.format(claim=claim, evidence_description=evidence_description)
         
-        print(f"Sending request to OpenRouter API...")
+        print(f"DEBUG: Sending request to OpenRouter API...")
+        print(f"DEBUG: Using model: openai/gpt-3.5-turbo")
+        
         response = requests.post(
             url="https://openrouter.ai/api/v1/chat/completions",
             headers={
                 "Authorization": f"Bearer {api_key}",
                 "Content-Type": "application/json",
-                "HTTP-Referer": "http://localhost:5000",
+                "HTTP-Referer": "https://sparkle-vault.vercel.app",
                 "X-Title": "Sparkle-Vault"
             },
             json={
@@ -138,23 +141,52 @@ def analyze_with_gemini(claim, evidence_description):
             timeout=60
         )
         
-        print(f"API Response Status: {response.status_code}")
+        print(f"DEBUG: API Response Status: {response.status_code}")
+        print(f"DEBUG: API Response Body: {response.text[:500]}")
         
         if response.status_code == 200:
             result = response.json()
-            print("✓ AI analysis successful")
+            print("DEBUG: AI analysis successful")
             return result['choices'][0]['message']['content']
-        elif response.status_code == 401:
-            print(f"✗ API Key invalid (401) - falling back to demo mode")
-            return generate_mock_analysis(claim, evidence_description)
         else:
+            # Return the actual error, don't hide it with demo mode
             error_msg = f"OpenRouter API Error {response.status_code}: {response.text}"
-            print(f"✗ {error_msg}")
-            return generate_mock_analysis(claim, evidence_description)
+            print(f"DEBUG: {error_msg}")
+            return f"""VERIFIED FACTS:
+- Claim submitted: {claim}
+- Evidence attached: {evidence_description}
+
+LOGIC LEAKS:
+- [API ERROR]: {error_msg}
+- The API key may be invalid or expired. Get a new key at https://openrouter.ai/keys
+
+VERDICT: API ERROR - Please check your OpenRouter API key
+
+CONFIDENCE SCORE: 0%
+
+DAG LOGIC MAP:
+A[User Claim] --> B[Evidence Submitted] --> C[API Error {response.status_code}] --> D[Check API Key]
+"""
     except Exception as e:
-        error_msg = f"Exception during API call: {str(e)}"
-        print(f"✗ {error_msg}")
-        return generate_mock_analysis(claim, evidence_description)
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"DEBUG: Exception during API call: {str(e)}")
+        print(f"DEBUG: Traceback: {error_details}")
+        return f"""VERIFIED FACTS:
+- Claim submitted: {claim}
+- Evidence attached: {evidence_description}
+
+LOGIC LEAKS:
+- [EXCEPTION]: {str(e)}
+- [TRACEBACK]: {error_details[:200]}
+
+VERDICT: EXCEPTION ERROR
+
+CONFIDENCE SCORE: 0%
+
+DAG LOGIC MAP:
+A[User Claim] --> B[Exception] --> C[{str(e)[:50]}]
+"""
 
 
 def generate_mock_analysis(claim, evidence_description):
