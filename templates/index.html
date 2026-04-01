@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle-Vault | Legal Lie Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+        }
+        .card-glow {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                Sparkle-Vault
+            </h1>
+            <p class="text-xl text-gray-300">Axiom-Law Engine | Deterministic Redress</p>
+            <p class="text-sm text-gray-400 mt-2">Truth-as-a-Service: Mathematical proof for legal claims</p>
+        </div>
+
+        <!-- Main Form Card -->
+        <div class="bg-gray-800 rounded-2xl p-8 card-glow">
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold text-blue-400 mb-2">Submit Your Case</h2>
+                <p class="text-gray-400 text-sm">Describe your legal claim and upload supporting evidence. Our Skeptic Agent will audit it for Logic Leaks.</p>
+            </div>
+
+            <form action="/submit" method="POST" enctype="multipart/form-data" class="space-y-6">
+                <!-- Claim Input -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2">
+                        Your Claim <span class="text-red-400">*</span>
+                    </label>
+                    <textarea 
+                        name="claim" 
+                        placeholder="Example: My landlord took a 50,000 deposit and never returned it despite me leaving the property in good condition..."
+                        class="w-full h-32 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 resize-none"
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Evidence Upload -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2">
+                        Upload Evidence (Artifact)
+                    </label>
+                    <div class="relative">
+                        <input 
+                            type="file" 
+                            name="evidence" 
+                            id="evidence"
+                            class="hidden"
+                            accept=".pdf,.jpg,.jpeg,.png,.txt"
+                        >
+                        <label 
+                            for="evidence" 
+                            class="flex items-center justify-center w-full h-32 border-2 border-dashed border-gray-600 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-gray-700/50 transition-all"
+                        >
+                            <div class="text-center">
+                                <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
+                                <p class="mt-2 text-sm text-gray-400">Click to upload receipts, contracts, photos, or documents</p>
+                                <p class="text-xs text-gray-500 mt-1">PDF, JPG, PNG up to 16MB</p>
+                            </div>
+                        </label>
+                    </div>
+                    <p id="file-name" class="mt-2 text-sm text-blue-400"></p>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                    type="submit" 
+                    class="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold text-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+                >
+                    Audit My Case
+                </button>
+            </form>
+        </div>
+
+        <!-- How It Works -->
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+            <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">1. Submit Evidence</h3>
+                <p class="text-gray-400 text-sm">Upload receipts, contracts, photos. No artifact = no fact.</p>
+            </div>
+            <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">2. Skeptic Audit</h3>
+                <p class="text-gray-400 text-sm">Our AI checks for Logic Leaks: temporal paradoxes, mismatches, circular reasoning.</p>
+            </div>
+            <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+                <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">3. Get Proof Certificate</h3>
+                <p class="text-gray-400 text-sm">Download a court-ready PDF with your logic map and verified facts.</p>
+            </div>
+        </div>
+
+        <!-- View Cases Link -->
+        <div class="text-center mt-8">
+            <a href="/cases" class="text-blue-400 hover:text-blue-300 underline">View Case History</a>
+        </div>
+    </div>
+
+    <script>
+        // Show selected filename
+        document.getElementById('evidence').addEventListener('change', function(e) {
+            const fileName = e.target.files[0]?.name || '';
+            document.getElementById('file-name').textContent = fileName ? `Selected: ${fileName}` : '';
+        });
+    </script>
+</body>
+</html>

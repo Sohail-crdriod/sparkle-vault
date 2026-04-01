@@ -1,0 +1,345 @@
+================================================================================
+                    INVESTMENT FRAUD - COMPLETE EVIDENCE PACKAGE
+                        SPARKLE-VAULT DEMO - TEST CASE 5
+                    VERY STRONG CASE (95%+ Expected Confidence)
+================================================================================
+
+INVESTOR: Test User
+INVESTMENT COMPANY: ABC Investment Company Pvt Ltd
+BROKER: Mr. Rajesh Kumar (Registered Investment Advisor)
+INVESTMENT DATE: March 1, 2023
+INVESTMENT AMOUNT: INR 5,00,000 (Five Lakhs Rupees Only)
+
+================================================================================
+                           ARTIFACT #1: INVESTMENT CONTRACT
+================================================================================
+
+INVESTMENT AGREEMENT
+
+This agreement is made on March 1, 2023 between:
+
+PARTY A (Investor): Test User
+Address: 123 Main Street, Mumbai, Maharashtra
+PAN: ABCDE1234F
+
+PARTY B (Company): ABC Investment Company Pvt Ltd
+Registered Office: 456 Business Park, Andheri East, Mumbai 400069
+CIN: U67200MH2022PTC123456
+
+BROKER: Mr. Rajesh Kumar (Registered with SEBI as Investment Advisor)
+IA Registration No.: INA000008765
+
+TERMS & CONDITIONS:
+
+1. INVESTMENT DETAILS
+   - Principal Amount: INR 5,00,000
+   - Investment Date: March 1, 2023
+   - Investment Type: Fixed Return Scheme
+   - Promised Return: 12% per annum
+   - Payout Frequency: Monthly (1st of every month)
+   - Monthly Payout Amount: INR 5,000
+
+2. COMPANY OBLIGATIONS
+   - Company shall pay INR 5,000 on the 1st of every month
+   - Principal refundable after 24 months with 30 days notice
+   - Company maintains sufficient liquidity for payouts
+
+3. INVESTOR RIGHTS
+   - Monthly payout credit to registered bank account
+   - Right to request principal refund after lock-in period
+   - Access to quarterly portfolio statements
+
+4. SIGNATURES
+
+   For ABC Investment Company:
+   _________________________
+   Mr. Vikram Sharma (Director)
+   Date: March 1, 2023
+   Company Seal: [STAMPED]
+
+   For Investor:
+   _________________________
+   Test User
+   Date: March 1, 2023
+
+   Witness/Broker:
+   _________________________
+   Mr. Rajesh Kumar (SEBI Registered IA)
+   Date: March 1, 2023
+
+================================================================================
+                          ARTIFACT #2: BROKER IDENTITY PROOF
+================================================================================
+
+REGISTERED INVESTMENT ADVISOR - IDENTITY VERIFICATION
+
+Name: Mr. Rajesh Kumar
+Father's Name: Mr. Suresh Kumar
+Date of Birth: January 15, 1985
+
+SEBI REGISTRATION DETAILS:
+- SEBI Registration Number: INA000008765
+- Registration Type: Investment Advisor (Individual)
+- Category: Non-Individual (through ABC Investment Company)
+- Date of Registration: June 15, 2021
+- Valid Until: June 14, 2026
+- Status: ACTIVE
+
+CONTACT DETAILS:
+- Mobile: +91-98765-43210
+- Email: rajesh.kumar@abcinvestments.com
+- Office: 456 Business Park, Andheri East, Mumbai
+
+DOCUMENTS VERIFIED:
+✓ PAN Card: ABCDE9876F
+✓ Aadhaar Card: XXXX-XXXX-7654
+✓ Educational Qualifications: MBA (Finance), NISM Certification
+✓ SEBI Registration Certificate: Valid and Active
+
+================================================================================
+                     ARTIFACT #3: INITIAL INVESTMENT BANK TRANSFER
+================================================================================
+
+BANK TRANSFER RECEIPT
+
+Transaction ID: NEFT202303010987654
+Date: March 1, 2023
+Time: 10:45:23 AM IST
+
+FROM ACCOUNT:
+Account Holder: Test User
+Bank: HDFC Bank Ltd
+Account Number: XXXX-XXXX-XXXX-1234
+IFSC: HDFC0000123
+
+TO ACCOUNT:
+Account Holder: ABC Investment Company Pvt Ltd
+Bank: ICICI Bank Ltd
+Account Number: XXXX-XXXX-XXXX-9876
+IFSC: ICIC0000456
+
+AMOUNT: INR 5,00,000.00 (Five Lakhs Rupees Only)
+Transaction Type: NEFT - Online Transfer
+Purpose: Investment - Fixed Return Scheme
+Reference: INV-TESTUSER-2023-001
+
+STATUS: COMPLETED
+UTR Number: ICIC123456789012
+Transaction Fee: INR 2.50
+Total Debited: INR 5,00,002.50
+
+REMARKS: Investment for 24-month Fixed Return Scheme at 12% p.a.
+
+================================================================================
+                      ARTIFACTS #4-9: MONTHLY PAYOUT RECEIPTS
+================================================================================
+
+--- PAYMENT RECEIPT #1 (April 2023) ---
+Credit Date: April 1, 2023
+From: ABC Investment Company Pvt Ltd
+To: Test User (HDFC Bank XXXX-1234)
+Amount: INR 5,000.00
+Description: Monthly Return - March 2023
+Reference: RET-2023-04-001
+Status: CREDITED
+
+--- PAYMENT RECEIPT #2 (May 2023) ---
+Credit Date: May 1, 2023
+From: ABC Investment Company Pvt Ltd
+To: Test User (HDFC Bank XXXX-1234)
+Amount: INR 5,000.00
+Description: Monthly Return - April 2023
+Reference: RET-2023-05-001
+Status: CREDITED
+
+--- PAYMENT RECEIPT #3 (June 2023) ---
+Credit Date: June 1, 2023
+From: ABC Investment Company Pvt Ltd
+To: Test User (HDFC Bank XXXX-1234)
+Amount: INR 5,000.00
+Description: Monthly Return - May 2023
+Reference: RET-2023-06-001
+Status: CREDITED
+
+--- PAYMENT RECEIPT #4 (July 2023) ---
+Credit Date: July 1, 2023
+From: ABC Investment Company Pvt Ltd
+To: Test User (HDFC Bank XXXX-1234)
+Amount: INR 5,000.00
+Description: Monthly Return - June 2023
+Reference: RET-2023-07-001
+Status: CREDITED
+
+--- PAYMENT RECEIPT #5 (August 2023) ---
+Credit Date: August 1, 2023
+From: ABC Investment Company Pvt Ltd
+To: Test User (HDFC Bank XXXX-1234)
+Amount: INR 5,000.00
+Description: Monthly Return - July 2023
+Reference: RET-2023-08-001
+Status: CREDITED
+
+--- PAYMENT RECEIPT #6 (September 2023) ---
+Credit Date: September 1, 2023
+From: ABC Investment Company Pvt Ltd
+To: Test User (HDFC Bank XXXX-1234)
+Amount: INR 5,000.00
+Description: Monthly Return - August 2023
+Reference: RET-2023-09-001
+Status: CREDITED
+
+TOTAL PAYOUTS RECEIVED: INR 30,000.00 (Six months × INR 5,000)
+
+================================================================================
+                       ARTIFACT #10: CEO EMAIL PROMISE
+================================================================================
+
+EMAIL CORRESPONDENCE
+
+From: vikram.sharma@abcinvestments.com
+To: testuser@email.com
+CC: rajesh.kumar@abcinvestments.com
+Date: August 15, 2023
+Subject: Re: Investment Status and Continued Payments
+
+Dear Mr. Test User,
+
+Thank you for your email dated August 10, 2023 regarding your investment with ABC Investment Company.
+
+I want to personally assure you that your investment of INR 5,00,000 is completely safe with us. As the CEO of this company, I stand behind every promise we have made.
+
+CURRENT STATUS:
+- Your investment is performing well
+- Monthly payouts will continue as scheduled (1st of every month)
+- Principal amount remains secure and refundable after lock-in period
+- Company is profitable and growing
+
+FUTURE COMMITMENTS:
+We value your trust and will ensure:
+✓ Continued monthly payouts without delay
+✓ Full principal refund whenever you request after lock-in
+✓ Premium customer support for all your queries
+
+Our recent expansion into new markets has strengthened our financial position. Your money is in safe hands.
+
+Should you have any concerns, please don't hesitate to contact me directly or through your broker Mr. Rajesh Kumar.
+
+Best regards,
+
+Vikram Sharma
+CEO, ABC Investment Company Pvt Ltd
+Mobile: +91-98765-12345
+
+---
+
+Note: This email was sent AFTER 5 successful payouts, creating trust before the fraud.
+
+================================================================================
+                       ARTIFACT #11: OFFICE CLOSURE EVIDENCE
+================================================================================
+
+PHOTO DOCUMENTATION - OFFICE CLOSURE
+
+Date of Photos: October 15, 2023
+Location: 456 Business Park, Andheri East, Mumbai 400069
+
+PHOTO #1: Main Office Entrance
+- Main door locked with heavy chain
+- Company name board removed (faint outline visible)
+- "Office Closed" notice posted (not official, handwritten)
+
+PHOTO #2: Reception Area (through window)
+- Desk empty, computer removed
+- Chairs stacked
+- Papers scattered on floor
+
+PHOTO #3: Broker's Desk
+- Mr. Rajesh Kumar's workstation empty
+- Personal items removed
+- Nameplate missing
+
+PHOTO #4: Building Directory
+- ABC Investment Company name removed from lobby directory
+- Only empty slot visible where name was
+
+PHOTO #5: Surrounding Area
+- Neighboring offices confirm company left "overnight"
+- Security guard says employees stopped coming from Oct 1, 2023
+- No forwarding address left
+
+ADDITIONAL EVIDENCE:
+- Phone numbers disconnected (tested on Oct 10, 2023)
+- Website down (Error 404 since Oct 5, 2023)
+- Broker Mr. Rajesh Kumar's phone switched off permanently
+
+================================================================================
+                         EVIDENCE SUMMARY - CHRONOLOGY
+================================================================================
+
+DATE          EVENT                           EVIDENCE
+--------------------------------------------------------------------------------
+Mar 1, 2023   Investment Made                 Contract + Bank Transfer
+Mar 1, 2023   Broker Verified                 ID Proof + SEBI Registration
+Apr 1, 2023   1st Payout Received             Bank Credit Receipt #1
+May 1, 2023   2nd Payout Received             Bank Credit Receipt #2
+Jun 1, 2023   3rd Payout Received             Bank Credit Receipt #3
+Jul 1, 2023   4th Payout Received             Bank Credit Receipt #4
+Aug 1, 2023   5th Payout Received             Bank Credit Receipt #5
+Aug 15, 2023  CEO Assurance Email             Email from Vikram Sharma
+Sep 1, 2023   6th Payout Received             Bank Credit Receipt #6
+Oct 1, 2023   7th Payout - NOT RECEIVED       Missing payment
+Oct 1, 2023   Office Closed                   Photos of locked office
+Oct 10, 2023  Phones Disconnected             Call attempt records
+
+================================================================================
+                              FINANCIAL CALCULATION
+================================================================================
+
+INVESTMENT DETAILS:
+Total Invested:          INR 5,00,000.00
+Returns Promised (12%):  INR 60,000.00 per year
+Monthly Payout:          INR 5,000.00
+
+ACTUAL TRANSACTIONS:
+Total Payouts Received:  INR 30,000.00 (6 months)
+Outstanding Principal:   INR 5,00,000.00
+Promised Returns Due:    INR 30,000.00 (6 months pending)
+
+TOTAL AMOUNT LOST:       INR 4,70,000.00
+(Total invested minus payouts received)
+
+VERIFICATION:
+5,00,000 - 30,000 = 4,70,000 ✓
+
+================================================================================
+                           WHY THIS IS A STRONG CASE
+================================================================================
+
+EVIDENCE COMPLETENESS SCORE: 11/11 (100%)
+
+1. ✓ Original signed contract with company seal
+2. ✓ Registered broker with valid SEBI license
+3. ✓ Bank proof of initial investment
+4-9. ✓ Six months of consistent payout receipts
+10. ✓ Written promise from company CEO
+11. ✓ Proof of business closure and disappearance
+
+TEMPORAL CONSISTENCY: ✓
+All dates align correctly - no paradoxes detected
+
+AMOUNT CONSISTENCY: ✓
+All financial calculations balance correctly
+
+DOCUMENT AUTHENTICITY: ✓
+Multiple independent sources (bank, SEBI, email, photos)
+
+FRAUD INDICATORS: ✓
+- Sudden closure after 6 months of legitimate operations
+- No notice to investors
+- Broker disappeared
+- All contact methods severed simultaneously
+
+================================================================================
+                        END OF EVIDENCE PACKAGE
+                    SPARKLE-VAULT DEMO TEST CASE 5
+================================================================================

@@ -1,0 +1,91 @@
+================================================================================
+                    RENTAL AGREEMENT & DEPOSIT RECEIPT
+                        SPARKLE-VAULT DEMO EVIDENCE
+================================================================================
+
+LANDLORD: Mr. Rajesh Sharma
+TENANT: Test User
+PROPERTY: Apartment 302, Sunshine Residency, Mumbai
+DATE: January 15, 2024
+
+--------------------------------------------------------------------------------
+                              BANK TRANSFER RECEIPT
+--------------------------------------------------------------------------------
+
+Transaction ID: TXN9876543210
+Date: January 15, 2024
+Amount: ₹50,000 (Fifty Thousand Rupees Only)
+From: Test User Account (XXXX1234)
+To: Mr. Rajesh Sharma (XXXX5678)
+Purpose: Security Deposit - Apartment 302
+
+Status: SUCCESSFUL
+Reference: RENT-DEP-2024-302
+
+--------------------------------------------------------------------------------
+                            LEASE AGREEMENT CLAUSES
+--------------------------------------------------------------------------------
+
+Section 4: Security Deposit
+- Tenant has paid ₹50,000 as refundable security deposit
+- Deposit to be returned within 15 days of lease termination
+- Deductions allowed only for: (a) unpaid rent, (b) damages beyond normal wear
+
+Section 8: Lease Termination  
+- Tenant vacated on December 31, 2024
+- Final inspection conducted on December 31, 2024
+- No damages found, property in good condition
+
+--------------------------------------------------------------------------------
+                           MOVE-OUT INSPECTION REPORT
+--------------------------------------------------------------------------------
+
+Date: December 31, 2024
+Inspector: Mr. Sharma (Landlord)
+
+Condition Assessment:
+✓ Walls: Good condition, no marks
+✓ Flooring: No scratches or damage
+✓ Kitchen: Clean, appliances working
+✓ Bathroom: Clean, no leaks
+✓ Windows: All intact, no cracks
+
+DEDUCTIONS RECOMMENDED: NONE
+SECURITY DEPOSIT STATUS: PENDING RETURN
+
+--------------------------------------------------------------------------------
+                              FOLLOW-UP EMAILS
+--------------------------------------------------------------------------------
+
+Email 1 (Jan 15, 2025):
+To: sharma.landlord@email.com
+Subject: Security Deposit Refund Request
+"Dear Mr. Sharma, It's been 15 days since I vacated. Please return my 
+₹50,000 deposit. Regards, Tenant"
+
+Email 2 (Feb 1, 2025):
+To: sharma.landlord@email.com  
+Subject: URGENT: Deposit Refund Overdue
+"Mr. Sharma, This is my second request. 45 days have passed and I have 
+not received my deposit. I need this resolved immediately."
+
+Email 3 (Mar 1, 2025):
+To: sharma.landlord@email.com
+Subject: LEGAL NOTICE - Final Demand for Deposit Return
+"Mr. Sharma, 75 days have passed. This is my final demand before 
+seeking legal recourse. Please return ₹50,000 immediately."
+
+--------------------------------------------------------------------------------
+                              PROOF SUMMARY
+--------------------------------------------------------------------------------
+
+✓ Evidence of Payment: Bank transfer receipt dated Jan 15, 2024
+✓ Evidence of Agreement: Lease showing deposit clause
+✓ Evidence of Good Condition: Move-out report dated Dec 31, 2024  
+✓ Evidence of Timeline: 3 follow-up emails spanning 75 days
+✗ Evidence of Refund: NO REFUND PROCESSED
+
+VERDICT: Landlord has illegally withheld security deposit for 75+ days
+         Property returned in good condition, no valid deductions exist
+
+================================================================================

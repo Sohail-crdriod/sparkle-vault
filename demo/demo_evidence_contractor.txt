@@ -1,0 +1,111 @@
+================================================================================
+                    HOME RENOVATION CONTRACT DISPUTE
+                   SPARKLE-VAULT DEMO EVIDENCE - LOGIC LEAK
+================================================================================
+
+HOMEOWNER: Test User
+CONTRACTOR: QuickFix Renovations (Mr. Deepak Verma)
+PROJECT: 2BHK Apartment Renovation
+PROJECT ADDRESS: Flat 12B, Green Valley Complex, Pune
+
+--------------------------------------------------------------------------------
+                              PAYMENT RECEIPT
+--------------------------------------------------------------------------------
+
+Receipt No: QF-2024-00158
+Date: January 10, 2024
+Received From: Test User
+Amount: ₹75,000 (Seventy Five Thousand Rupees Only)
+Payment Mode: Cash
+Purpose: Full payment for home renovation project
+
+Stamp: QuickFix Renovations
+Signature: D. Verma
+
+*** IMPORTANT: This receipt is dated JANUARY 10, 2024 ***
+
+--------------------------------------------------------------------------------
+                         WORK COMPLETION CERTIFICATE
+--------------------------------------------------------------------------------
+
+CERTIFICATE OF PROJECT COMPLETION
+
+This is to certify that the renovation work at Flat 12B, Green Valley 
+Complex, Pune has been completed satisfactorily as per the agreement.
+
+Project Details:
+- Living Room: Painting, False Ceiling, Lighting
+- Kitchen: Modular Kitchen Installation, Tiling
+- Bedrooms: Wardrobes, Painting, Electrical
+- Bathroom: New Fittings, Waterproofing
+
+Date of Completion: January 5, 2024
+Date of Certificate: January 5, 2024
+
+Contractor Signature: ___________ (Mr. D. Verma)
+Homeowner Signature: ___________ (Pending)
+
+*** IMPORTANT: This certificate is dated JANUARY 5, 2024 ***
+*** This is 5 DAYS BEFORE the payment date of January 10 ***
+
+--------------------------------------------------------------------------------
+                        COMPLAINT EMAILS TO CONTRACTOR
+--------------------------------------------------------------------------------
+
+Email 1: (February 1, 2024)
+To: quickfix@email.com
+Subject: Incomplete Work - Kitchen Not Done
+"Mr. Verma, The kitchen modular work is still not complete. The cabinets 
+are half-finished and no countertop installed. You gave me a completion 
+certificate but work is clearly not done. Please finish or refund."
+
+Email 2: (February 15, 2024)  
+To: quickfix@email.com
+Subject: URGENT: Bathroom Leaking - No Response
+"This is serious. The bathroom waterproofing was not done properly and 
+now there's water leakage into the neighbor's flat below. You are not 
+picking up my calls. I need immediate resolution."
+
+Email 3: (March 1, 2024)
+To: quickfix@email.com, consumerforum@help.gov.in
+Subject: FRAUD - Paid ₹75K for Incomplete Work
+"Mr. Verma has disappeared. Phone switched off. Office closed. 
+I have a completion certificate dated Jan 5 but work was never completed.
+I paid ₹75,000 on Jan 10. Please help me get refund."
+
+--------------------------------------------------------------------------------
+                              THE LOGIC LEAK
+--------------------------------------------------------------------------------
+
+TEMPORAL PARADOX DETECTED:
+
+- Completion Certificate: January 5, 2024
+- Payment Receipt: January 10, 2024
+- Time Difference: 5 days
+
+QUESTION: How can the contractor sign a completion certificate on 
+January 5 stating all work is done, when the homeowner only paid on 
+January 10?
+
+POSSIBLE EXPLANATIONS:
+1. The certificate is BACKDATED (forgery/fraud)
+2. The payment was advance, certificate issued early (still suspicious)
+3. The dates were simply misprinted (unlikely on official document)
+
+IMPLICATIONS:
+- If work was "completed" on Jan 5, why did homeowner pay on Jan 10?
+- If work was incomplete in Feb/Mar, how was it "complete" on Jan 5?
+- The certificate appears to be a fraudulent document
+
+--------------------------------------------------------------------------------
+                              PROOF SUMMARY
+--------------------------------------------------------------------------------
+
+✓ Evidence of Payment: Cash receipt for ₹75,000 dated Jan 10, 2024
+✓ Evidence of Incomplete Work: 3 complaint emails spanning 2 months
+✗ Evidence of Completion: Certificate dated Jan 5 is TEMPORALLY IMPOSSIBLE
+
+VERDICT: Contractor issued fraudulent completion certificate (predated)
+         Actual work was never completed, contractor has absconded
+
+================================================================================

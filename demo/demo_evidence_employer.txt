@@ -1,0 +1,84 @@
+================================================================================
+                    SALARY DISPUTE - INCOMPLETE EVIDENCE
+                        SPARKLE-VAULT DEMO EVIDENCE
+================================================================================
+
+EMPLOYEE: Test User
+EMPLOYER: TechCorp India Pvt Ltd
+EMPLOYMENT PERIOD: March 1, 2024 - June 30, 2024
+DESIGNATION: Software Developer
+
+--------------------------------------------------------------------------------
+                              EMAIL CORRESPONDENCE
+--------------------------------------------------------------------------------
+
+Email Thread 1: (April 15, 2024)
+From: employee@email.com
+To: hr@techcorp.com
+Subject: Salary Delay - April 2024
+"Hi HR Team, I haven't received my April salary yet. It was supposed to 
+be credited by April 5th. Please check and update. My employee ID: TC-4421"
+
+Reply 1: (April 16, 2024)
+From: hr@techcorp.com  
+To: employee@email.com
+Subject: Re: Salary Delay
+"We are looking into this. Some delay due to system issues. Will update soon."
+
+---
+
+Email Thread 2: (May 20, 2024)
+From: employee@email.com
+To: hr@techcorp.com, manager@techcorp.com  
+Subject: URGENT: 2 Months Salary Pending
+"Dear HR/Manager, I have not received salary for April and May 2024. 
+This is causing severe financial hardship. Please process immediately."
+
+Reply 2: (May 22, 2024)
+From: manager@techcorp.com
+To: employee@email.com
+"We understand the concern. Company facing cash flow issues. 
+Working to resolve. Please bear with us."
+
+---
+
+Email Thread 3: (June 15, 2024)
+From: employee@email.com
+To: hr@techcorp.com
+Subject: Resignation & Final Settlement Request
+"I am resigning effective immediately due to non-payment of salary. 
+Please process my full and final settlement including:
+- March 2024: ₹50,000 (PAID - ok)
+- April 2024: ₹50,000 (UNPAID)
+- May 2024: ₹50,000 (UNPAID)  
+- June 2024: ₹50,000 (UNPAID)
+Total Due: ₹1,50,000"
+
+Reply 3: (June 16, 2024)
+From: hr@techcorp.com
+To: employee@email.com
+"Resignation accepted. Settlement will be processed as per company policy."
+
+--------------------------------------------------------------------------------
+                              WHAT'S MISSING
+--------------------------------------------------------------------------------
+
+✗ No Appointment Letter showing agreed salary amount
+✗ No Pay Slips for any month (even March when paid)
+✗ No Bank Statements showing salary credit (only March)
+✗ No Company Policy document showing settlement terms
+✗ No Termination/Resignation Acceptance letter on company letterhead
+✗ No proof that June 2024 salary is actually owed (resigned mid-month)
+
+--------------------------------------------------------------------------------
+                              PROOF SUMMARY
+--------------------------------------------------------------------------------
+
+✓ Evidence of Employment: Email mentions employee ID TC-4421
+✓ Evidence of Unpaid Salary: HR acknowledges delay in emails
+✓ Evidence of Resignation: Email dated June 15, 2024
+✗ Proof of Exact Amount Owed: Self-claimed ₹1,50,000 but no payslips
+✗ Proof of Full June Month Work: Resigned June 15, full month not worked
+✗ Company Acknowledgment of Full Amount: No formal letter confirming ₹1.5L
+
+================================================================================
