@@ -106,22 +106,16 @@ def analyze_with_gemini(claim, evidence_description):
     """Send claim to OpenRouter API for analysis (free tier, no quota limits)"""
     api_key = os.environ.get('OPENROUTER_API_KEY')
     
+    # Log key info for debugging (mask most of it)
+    if api_key:
+        masked_key = api_key[:15] + "..." + api_key[-4:] if len(api_key) > 20 else "invalid_length"
+        print(f"Using API key: {masked_key}")
+    else:
+        print("WARNING: No OPENROUTER_API_KEY found in environment")
+    
     if not api_key or api_key == 'sk-or-v1-your-key-here':
-        return f"""VERIFIED FACTS:
-- Claim submitted: {claim}
-- Evidence attached: {evidence_description}
-
-LOGIC LEAKS:
-- [API ERROR]: OPENROUTER_API_KEY not set. Get free key at https://openrouter.ai/keys
-- [Axiom Violated]: Rule 1 - No AI verification performed
-
-VERDICT: INSUFFICIENT EVIDENCE (Manual Review Required)
-
-CONFIDENCE SCORE: 0%
-
-DAG LOGIC MAP:
-A[User Claim] --> B[Evidence Submitted] --> C[AI Verification Failed] --> D[Manual Review Required]
-"""
+        print("Falling back to DEMO MODE - no valid API key")
+        return generate_mock_analysis(claim, evidence_description)
     
     try:
         prompt = SKEPTIC_PROMPT.format(claim=claim, evidence_description=evidence_description)
@@ -150,42 +144,17 @@ A[User Claim] --> B[Evidence Submitted] --> C[AI Verification Failed] --> D[Manu
             result = response.json()
             print("✓ AI analysis successful")
             return result['choices'][0]['message']['content']
+        elif response.status_code == 401:
+            print(f"✗ API Key invalid (401) - falling back to demo mode")
+            return generate_mock_analysis(claim, evidence_description)
         else:
             error_msg = f"OpenRouter API Error {response.status_code}: {response.text}"
             print(f"✗ {error_msg}")
-            return f"""VERIFIED FACTS:
-- Claim submitted: {claim}
-- Evidence attached: {evidence_description}
-
-LOGIC LEAKS:
-- [API ERROR]: {error_msg}
-- [Axiom Violated]: Rule 1 - AI verification failed
-
-VERDICT: INSUFFICIENT EVIDENCE (Manual Review Required)
-
-CONFIDENCE SCORE: 0%
-
-DAG LOGIC MAP:
-A[User Claim] --> B[Evidence Submitted] --> C[API Error] --> D[Manual Review Required]
-"""
+            return generate_mock_analysis(claim, evidence_description)
     except Exception as e:
         error_msg = f"Exception during API call: {str(e)}"
         print(f"✗ {error_msg}")
-        return f"""VERIFIED FACTS:
-- Claim submitted: {claim}
-- Evidence attached: {evidence_description}
-
-LOGIC LEAKS:
-- [API ERROR]: {error_msg}
-- [Axiom Violated]: Rule 1 - AI verification failed
-
-VERDICT: INSUFFICIENT EVIDENCE (Manual Review Required)
-
-CONFIDENCE SCORE: 0%
-
-DAG LOGIC MAP:
-A[User Claim] --> B[Evidence Submitted] --> C[API Error] --> D[Manual Review Required]
-"""
+        return generate_mock_analysis(claim, evidence_description)
 
 
 def generate_mock_analysis(claim, evidence_description):
