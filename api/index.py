@@ -13,13 +13,21 @@ load_dotenv()
 # Get the directory containing this file for Vercel compatibility
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE_DIR = os.path.join(BASE_DIR, '..', 'templates')
-UPLOAD_DIR = os.path.join(BASE_DIR, '..', 'uploads')
+
+# Vercel only allows writing to /tmp, so use that for uploads and database
+IS_VERCEL = os.environ.get('VERCEL') == '1'
+if IS_VERCEL:
+    UPLOAD_DIR = '/tmp/uploads'
+    DB_PATH = '/tmp/sparkle_vault.db'
+else:
+    UPLOAD_DIR = os.path.join(BASE_DIR, '..', 'uploads')
+    DB_PATH = os.path.join(BASE_DIR, '..', 'sparkle_vault.db')
 
 app = Flask(__name__, template_folder=TEMPLATE_DIR)
 app.config['UPLOAD_FOLDER'] = UPLOAD_DIR
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
-# Create uploads folder if it doesn't exist
+# Create uploads folder if it doesn't exist (use /tmp on Vercel)
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Initialize OpenRouter API from environment variable
@@ -65,9 +73,6 @@ CONFIDENCE SCORE: X%
 DAG LOGIC MAP (Mermaid format):
 Describe the proof chain as nodes and edges (e.g., A[Claim] --> B[Evidence1] --> C[Conclusion])
 """
-
-# Database path for Vercel compatibility
-DB_PATH = os.path.join(BASE_DIR, '..', 'sparkle_vault.db')
 
 # Database initialization
 def init_db():
